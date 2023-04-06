@@ -2,15 +2,15 @@ extends layout
 
 block content
   h1= title
-  - let results =  [{flower_name:"rose",flower_color:"red",flower_size:"3 cm"},{flower_name:"lotus",flower_color:"white",flower_size:"10 cm"},{flower_name:"sunflowers",flower_color:"white",flower_size:"9 cm"}]
-   div(class="container-fluid")
+ - let results =  [{flower_name:"rose",flower_color:"red",flower_size:"3 cm"},{flower_name:"lotus",flower_color:"white",flower_size:"10 cm"},{flower_name:"sunflowers",flower_color:"white",flower_size:"9 cm"}]
+  div(class="container-fluid")
     div(class="row")
       each item,index in results
         div(class="col-sm-2",onClick=`buy(${index})`)
-          p name is #{item.flower_name}
-          p color is #{item.flower_color}
-          p size is #{item.flower_size}
-          //p Sides are #{item.Kite_sides}
+          p Color is #{item.flower_color}
+          p Length is #{item.flower_length}
+          p Cost is #{item.flower_cost}
+          p Sides are #{item.flower_sides}
 
   //- Bonus Logic
   script.
